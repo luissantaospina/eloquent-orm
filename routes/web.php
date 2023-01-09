@@ -10,3 +10,5 @@ Route::get('/destinations', [DestinationController::class, 'index']);
 Route::get('/destinations/last', [DestinationController::class, 'indexWithDate']);
 Route::get('/flights', [FlightController::class, 'index']);
 Route::get('/flights/first', [FlightController::class, 'indexFirst']);
+Route::get('/flights/firstOrCreate', [FlightController::class, 'indexFirstOrCreate']);
+Route::get('/flights/where', [FlightController::class, 'indexWhereWithAction']);

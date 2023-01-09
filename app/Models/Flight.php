@@ -15,5 +15,6 @@ class Flight extends Model
         'legs',
         'active',
         'departed',
+        'destinationId'
     ];
 }
