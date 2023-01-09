@@ -12,3 +12,4 @@ Route::get('/flights', [FlightController::class, 'index']);
 Route::get('/flights/first', [FlightController::class, 'indexFirst']);
 Route::get('/flights/firstOrCreate', [FlightController::class, 'indexFirstOrCreate']);
 Route::get('/flights/where', [FlightController::class, 'indexWhereWithAction']);
+Route::get('/flights/store', [FlightController::class, 'store']);

@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Destination;
 use App\Models\Flight;
 
 class FlightController extends Controller
@@ -61,5 +60,23 @@ class FlightController extends Controller
         $flightsPromActive =  Flight::where('active', true)->avg('legs');  // Promedio legs de los vuelos activos
 
         return 'Vuelos activos: ' . $flightsCountActive . ' Suma de tramos vuelos activos: '. $flightsSumActive;
+    }
+
+    // Crea un registro con asignacion masiva, para este metodo se debe habilitar la propiedad fillable y tener cuidado de no
+    // colocar datos sensibles para dicho llenado pues estos se debe proteger
+    public function store()
+    {
+        $data = [
+            'name' => 'Prueba',
+            'number' => 789,
+            'legs' => 4,
+            'active' => true,
+            'departed' => false,
+            'destinationId' => 4
+        ];
+
+        Flight::create($data);
+
+        return $data;
     }
 }
