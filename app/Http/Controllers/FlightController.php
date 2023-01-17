@@ -34,7 +34,8 @@ class FlightController extends Controller
         );
     }
 
-    // Busca un registro por el name, si no lo encuentra crea una nuevo instancia de flight (sin guardarla) con la informacion dada uniendo ambos arrays
+    // Busca un registro por el name, si no lo encuentra crea una nuevo instancia de flight (sin guardarla) con
+    // la informacion dada uniendo ambos arrays
     public function indexFirstOrNew()
     {
         return Flight::firstOrNew(
@@ -62,7 +63,8 @@ class FlightController extends Controller
         return 'Vuelos activos: ' . $flightsCountActive . ' Suma de tramos vuelos activos: '. $flightsSumActive;
     }
 
-    // Crea un registro con asignacion masiva, para este metodo se debe habilitar la propiedad fillable y tener cuidado de no
+    // Crea un registro con asignacion masiva, para este metodo se debe habilitar la propiedad
+    // fillable y tener cuidado de no
     // colocar datos sensibles para dicho llenado pues estos se debe proteger
     public function store()
     {
